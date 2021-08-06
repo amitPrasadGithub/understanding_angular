@@ -1,5 +1,27 @@
 <div class="row">
-    <div class="col-xs-12">
-        <app-personal-info-component></app-personal-info-component>
+    <div class="col-xs-4">
+        <div><a [routerLink]="['/contactDetail', '1', {
+            outlets: {
+                'contactDetail': ['personalInfo', '1']
+            }
+        }]">Personal Info</a></div>
+        <div><a [routerLink]="['/contactDetail', '1', {
+            outlets: {
+                'contactDetail': ['address', '1']
+            }
+        }]">Address</a></div>
+        <div><a [routerLink]="['/contactDetail/1', {
+            outlets: {
+                'contactDetail': ['phone', '1']
+            }
+        }]">Phone</a></div>
+        <div><a [routerLink]="['/contactDetail', '1', {
+            outlets: {
+                'contactDetail': ['webAddress', '1']
+            }
+        }]">WebAddress</a></div>
+    </div>
+    <div class="col-xs-6">
+        <router-outlet name="contactDetail"></router-outlet>
     </div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppPagesService } from 'src/pages/services/app-pages.service';
 import { AddressService } from 'src/pages/services/childs/address.service';
 import { ContactDetailService } from 'src/pages/services/childs/contact-detail.service';
@@ -16,6 +16,7 @@ export class ContactDetailComponent implements OnInit {
 
     constructor(
         private appContactService: AppPagesService,
+        private router: Router,
         private route: ActivatedRoute,
         private personalInfoService: PersonalInfoService,
         private addressService: AddressService,
@@ -25,6 +26,11 @@ export class ContactDetailComponent implements OnInit {
 
     contactDetailService: ContactDetailService = this.appContactService.getContactDetailService;
     
+    onClick(view: string) {
+        if(view === 'info')
+            this.router.navigate(['personalInfo/1', {relativeTo: this.route}]);
+    }
     ngOnInit() {}
+
 
 }
