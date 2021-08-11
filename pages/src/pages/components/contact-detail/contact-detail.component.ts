@@ -17,7 +17,7 @@ export class ContactDetailComponent implements OnInit {
     constructor(
         private appContactService: AppPagesService,
         private router: Router,
-        private route: ActivatedRoute,
+        private activeRoute: ActivatedRoute,
         private personalInfoService: PersonalInfoService,
         private addressService: AddressService,
         private phoneService: PhoneService,
@@ -27,9 +27,10 @@ export class ContactDetailComponent implements OnInit {
     contactDetailService: ContactDetailService = this.appContactService.getContactDetailService;
     
     onClick(view: string) {
-        if(view === 'info')
-            this.router.navigate(['personalInfo/1', {relativeTo: this.route}]);
+        if(view === 'sticky-notes')
+            this.router.navigate(['stickyNotes', {relativeTo: this.activeRoute}]);
     }
+
     ngOnInit() {}
 
 

@@ -11,7 +11,11 @@
                     <a class="dropdown-toggle" role="button">Contact</a>
                     <div class="dropdown-menu">
                         <li><a routerLink="/contactDetail/1">Detail</a></li>
-                        <li><a routerLink="/contactSummary/1">Summary</a></li>
+                        <li><a 
+                            [routerLink]="['/contactSummary']"
+                            [queryParams]="{id: '1', name: 'cipher'}"
+                            fragment="loading"
+                            >Summary</a></li>
                         <li><a>List</a></li>
                     </div>
                 </li>

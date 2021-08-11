@@ -20,6 +20,11 @@
                 'contactDetail': ['webAddress', '1']
             }
         }]">WebAddress</a></div>
+        <div><a [routerLink]="['/contactDetail', '1', {
+            outlets: {
+                'contactDetail': 'stickyNotes'
+            }
+        }]">Sticky Notes</a></div>
     </div>
     <div class="col-xs-6">
         <router-outlet name="contactDetail"></router-outlet>
