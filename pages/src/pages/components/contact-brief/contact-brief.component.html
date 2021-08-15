@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div *ngIf="cardType === 'row'" class="col-xs-12">
+            <a  href=""
+                class="list-group-item clearfix">
+                <div class="col-xs-3 pull-left">
+                    <div style="float: left;">
+                        <h4 class="list-group-item-heading">{{contactDetail.personalInfo[0].personalInfo.firstName}}</h4>
+                        <p class="list-group-item-text">Nagpur, Maharashtra</p>
+                        <p class="list-group-item-text">81495 77287</p>
+                        <p class="list-group-item-text">amit797@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <p>Cricket</p>
+                    <p>football</p>
+                    <p>hockey</p>
+                </div>
+                <div class="col-xs-1">
+                    <p>24</p>
+                    <p>168</p>
+                    <p>5.10</p>
+                </div>
+                <span class="col-xs-1 pull-right">
+                    <img src="https://media1.popsugar-assets.com/files/thumbor/efbuTJIaNqy0EJ-PRJTYI5wVxZE/8x154:1993x2139/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/02/24/876/n/1922398/46fadbc65e542bc2f40127.90581595_/i/Zayn-Malik.jpg" alt="" style="max-height: 90px;">
+                </span>
+            </a>
+        </div>
+        <div *ngIf="cardType === 'card'">Its a card</div>
+    </div>
+</div>

@@ -15,10 +15,11 @@ export class PersonalInfoComponent implements OnInit {
         private contactDetailService: ContactDetailService
     ) {}
     personalInfoService: PersonalInfoService;
-    personalInfo: PersonalInfo;
+    personalInfo: Array<PersonalInfo>;
     
     ngOnInit() {
-        this.personalInfoService = this.contactDetailService.getPersonalInfoService;    
-        this.personalInfo = this.personalInfoService.personalInfo;
+        this.personalInfoService = this.contactDetailService.getPersonalInfoService; 
+        this.personalInfoService.setPersonalInfo(1);
+        this.personalInfo = this.personalInfoService.getPersonalInfo;
     }
 }

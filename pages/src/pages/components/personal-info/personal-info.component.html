@@ -1,12 +1,12 @@
 <div class="row">
-    {{ personalInfo.getId }}
+    {{ personalInfo[0].getId }}
 </div>
 <div class="row">
     <div class="col-xs-5">
         First Name
     </div>
     <div class="col-xs-7">
-        {{ personalInfo.getInfo.firstName}}
+        {{ personalInfo[0].getPersonalInfo.firstName}}
     </div>
 </div>
 <div class="row">
@@ -14,6 +14,6 @@
         Last Name
     </div>
     <div class="col-xs-7">
-        {{ personalInfo.getInfo.lastName}}
+        {{ personalInfo[0].getPersonalInfo.lastName}}
     </div>
 </div>

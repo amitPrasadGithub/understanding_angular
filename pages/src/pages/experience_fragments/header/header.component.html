@@ -16,7 +16,12 @@
                             [queryParams]="{id: '1', name: 'cipher'}"
                             fragment="loading"
                             >Summary</a></li>
-                        <li><a>List</a></li>
+
+                        <li><a
+                            [routerLink]="['/viewAllContacts']"
+                            [queryParams]="{id: '1'}"
+                            fragment="loading"
+                            >View All Contacts</a></li>
                     </div>
                 </li>
                 <li routerLinkActive="active"><a routerLink="/login">Login</a></li>

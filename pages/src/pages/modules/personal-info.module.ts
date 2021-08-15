@@ -1,7 +1,7 @@
 export class PersonalInfo {
     constructor(
         private id: number,
-        private info: {
+        private personalInfo: {
             firstName: string,
             lastName: string
         }
@@ -11,7 +11,7 @@ export class PersonalInfo {
         return this.id;
     }
 
-    get getInfo() {
-        return this.info;
+    get getPersonalInfo() {
+        return this.personalInfo;
     }
 }
