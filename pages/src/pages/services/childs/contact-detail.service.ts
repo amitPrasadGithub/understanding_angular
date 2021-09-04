@@ -25,10 +25,12 @@ export class ContactDetailService {
     webAddress: Array<WebAddress> = [];
 
     setContactDetail(id) {
-        this.personalInfo.push(new PersonalInfo(1, {firstName: 'amit', lastName: 'prasad'}));
-        this.address.push(new Address(1, {houseNo: 1, area: 'dattawadi', city: 'nagpur', state: 'MH', country: 'IN', pincode: 440023}));
-        this.phone.push(new Phone(1, {id: 1, type: 'home', phone: 8149577287}));
-        this.webAddress.push(new WebAddress(1, {email: 'amit@gmail.com'}));
+        this.personalInfo.push(new PersonalInfo(1, {personalInfoId: 2, firstName: 'amit', lastName: 'prasad', birthday: new Date('30-11-1996'), gender: 'male', password: '1234', contactId: 2, addedBy: 1}));
+        this.address.push(new Address(1, {addressId: 1, houseNo: 1, area: 'dattawadi', city: 'nagpur', state: 'MH', country: 'IN', pincode: 440023, contactId: 2, addedBy: 1}));
+        this.phone.push(new Phone(1, {phoneId: 2, type: 'home', phone: 8149577287, contactId: 2, addedBy: 1}));
+        this.webAddress.push(new WebAddress(1, {webAddressId: 2, type: 'personal', email: 'amit@gmail.com', contactId: 2, addedBy: 1}));
+
+
 
         this.contactDetail = [
             new ContactDetail(
@@ -44,8 +46,7 @@ export class ContactDetailService {
                 this.address,
                 this.phone,
                 this.webAddress
-            )
-        ]
+        )];
     }
 
     get getContactDetail() {

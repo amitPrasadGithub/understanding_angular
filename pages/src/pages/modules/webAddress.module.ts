@@ -2,7 +2,11 @@ export class WebAddress {
     constructor(
         private id: number,
         private webAddressInfo: {
-            email: string
+            webAddressId: number,
+            type: string,
+            email: string,
+            contactId: number,
+            addedBy: number
         }
     ) {}
 }

@@ -5,8 +5,8 @@ export class PersonalInfoService {
 
     setPersonalInfo(id) {
         this.personalInfo = [
-            new PersonalInfo(1, {firstName: 'amit', lastName: 'prasad'}),
-            new PersonalInfo(2, {firstName: 'zain', lastName: 'malik'})
+            new PersonalInfo(1, {personalInfoId: 2, firstName: 'amit', lastName: 'prasad', birthday: new Date('30-11-1996'), gender: 'male', password: '1234', contactId: 2, addedBy: 1}),
+            new PersonalInfo(1, {personalInfoId: 2, firstName: 'amit', lastName: 'prasad', birthday: new Date('30-11-1996'), gender: 'male', password: '1234', contactId: 2, addedBy: 1}),
         ]
     }
     get getPersonalInfo() {
