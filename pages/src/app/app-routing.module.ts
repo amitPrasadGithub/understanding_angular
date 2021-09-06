@@ -4,14 +4,20 @@ import { AddressComponent } from 'src/pages/components/address/address.component
 import { AppsComponent } from 'src/pages/components/apps/apps.component';
 import { ContactDetailComponent } from 'src/pages/components/contact-detail/contact-detail.component';
 import { ContactSummaryComponent } from 'src/pages/components/contact-summary/contact-summary.component';
+import { ErrorPageComponent } from 'src/pages/components/error-page/error-page.component';
 import { PageNotFoundComponent } from 'src/pages/components/error/page-not-found/page-not-found.component';
 import { HomeComponent } from 'src/pages/components/home/home.component';
 import { LoginComponent } from 'src/pages/components/login/login.component';
 import { PersonalInfoComponent } from 'src/pages/components/personal-info/personal-info.component';
 import { PhoneComponent } from 'src/pages/components/phone/phone.component';
+import { PrefetchComponent } from 'src/pages/components/prefetch/prefetch.component';
 import { ProductComponent } from 'src/pages/components/product/product.component';
 import { StickyNotesComponent } from 'src/pages/components/sticky-notes/sticky-notes.component';
+import { ViewAllContactsComponent } from 'src/pages/components/view-all-contacts/view-all-contacts.component';
 import { WebAddressComponent } from 'src/pages/components/webAddress/webAddress.component';
+import { AdminGaurd } from 'src/pages/gaurds/admin-gaurd.service';
+import { AuthGaurd } from 'src/pages/gaurds/auth-gaurd.service';
+import { ErrorResolverService } from 'src/pages/services/childs/error-resolver.service';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -21,6 +27,7 @@ const appRoutes: Routes = [
     { 
       path: 'contactDetail/:id', 
       component: ContactDetailComponent, 
+      canActivateChild: [AuthGaurd],
       children: [
         { path: 'personalInfo/:id', component: PersonalInfoComponent, outlet: 'contactDetail' },
         { path: 'address/:id', component: AddressComponent, outlet: 'contactDetail' },
@@ -29,6 +36,9 @@ const appRoutes: Routes = [
         { path: 'stickyNotes', component: StickyNotesComponent, outlet: 'contactDetail' }
     ] },
     { path: 'contactSummary', component: ContactSummaryComponent },
+    { path: 'viewAllContacts', component: ViewAllContactsComponent, canActivate: [AuthGaurd] },
+    { path: 'prefetch', component: PrefetchComponent, resolve: {errorResolverService: ErrorResolverService}},
+    { path: 'error-page', component: ErrorPageComponent, data: {message: 'Permission Denied'} },
     { path: '**', component: PageNotFoundComponent }
     
   ]

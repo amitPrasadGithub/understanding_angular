@@ -24,6 +24,12 @@
                             >View All Contacts</a></li>
                     </div>
                 </li>
+                <li appDropdown>
+                    <a class="dropdown-toggle" role="button">Test</a>
+                    <div class="dropdown-menu">
+                        <li><a [routerLink]="['prefetch']">Prefetch</a></li>
+                    </div>
+                </li>
                 <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
