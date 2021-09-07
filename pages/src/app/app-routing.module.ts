@@ -8,11 +8,13 @@ import { ErrorPageComponent } from 'src/pages/components/error-page/error-page.c
 import { PageNotFoundComponent } from 'src/pages/components/error/page-not-found/page-not-found.component';
 import { HomeComponent } from 'src/pages/components/home/home.component';
 import { LoginComponent } from 'src/pages/components/login/login.component';
+import { CustomObservable } from 'src/pages/components/observables/custom-observable/custom-observable.component';
 import { PersonalInfoComponent } from 'src/pages/components/personal-info/personal-info.component';
 import { PhoneComponent } from 'src/pages/components/phone/phone.component';
 import { PrefetchComponent } from 'src/pages/components/prefetch/prefetch.component';
 import { ProductComponent } from 'src/pages/components/product/product.component';
 import { StickyNotesComponent } from 'src/pages/components/sticky-notes/sticky-notes.component';
+import { EventEmitterComponent } from 'src/pages/components/test/event-emitter/event-emitter.component';
 import { ViewAllContactsComponent } from 'src/pages/components/view-all-contacts/view-all-contacts.component';
 import { WebAddressComponent } from 'src/pages/components/webAddress/webAddress.component';
 import { AdminGaurd } from 'src/pages/gaurds/admin-gaurd.service';
@@ -36,6 +38,8 @@ const appRoutes: Routes = [
         { path: 'stickyNotes', component: StickyNotesComponent, outlet: 'contactDetail' }
     ] },
     { path: 'contactSummary', component: ContactSummaryComponent },
+    { path: 'custom-observable', component: CustomObservable },
+    { path: 'event-emitter', component: EventEmitterComponent },
     { path: 'viewAllContacts', component: ViewAllContactsComponent, canActivate: [AuthGaurd] },
     { path: 'prefetch', component: PrefetchComponent, resolve: {errorResolverService: ErrorResolverService}},
     { path: 'error-page', component: ErrorPageComponent, data: {message: 'Permission Denied'} },
