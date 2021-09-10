@@ -9,6 +9,7 @@ import { CustomObservable } from 'src/pages/components/observables/custom-observ
 import { PersonalInfoComponent } from 'src/pages/components/personal-info/personal-info.component';
 import { PrefetchComponent } from 'src/pages/components/prefetch/prefetch.component';
 import { EventEmitterComponent } from 'src/pages/components/test/event-emitter/event-emitter.component';
+import { FormsComponent } from 'src/pages/components/test/forms/forms.component';
 import { ViewAllContactsComponent } from 'src/pages/components/view-all-contacts/view-all-contacts.component';
 import { DropdownDirective } from 'src/pages/directives/dropdown/dropdown.directive';
 import { HeaderComponent } from 'src/pages/experience_fragments/header/header.component';
@@ -42,6 +43,7 @@ import { AppComponent } from './app.component';
     PrefetchComponent,
     CustomObservable,
     EventEmitterComponent,
+    FormsComponent,
     
 
     DropdownDirective,
