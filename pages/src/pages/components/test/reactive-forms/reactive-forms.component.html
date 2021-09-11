@@ -1,0 +1,27 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="form-group" formGroupName="contactData">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form-control" formControlName="username" type="text" id="username" name="username">
+            <!-- <span *ngIf="!signupForm.get('contactData.username').errors.">Field is required</span> -->
+            <!-- <span *ngIf="signupForm.get('contactData.username').errors['invalidName']">Invalid Name</span> -->
+            <span *ngIf="!signupForm.get('contactData.username').valid && signupForm.get('contactData.username').touched" class="help-block">Please enter a valid username</span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" formControlName="email" type="text" id="email" name="email">
+            <span *ngIf="!signupForm.get('contactData.email').valid && signupForm.get('contactData.email').touched" class="help-block">Please enter a valid email</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <div class="radio">
+            <label *ngFor="let gender of genders">
+                <input formControlName="gender" [value]="gender" type="radio" name="gender">
+                {{ gender }}
+            </label>
+        </div>
+    </div>
+    <span *ngIf="!signupForm.valid && signupForm.touched" class="help-block">Incomplete Form</span>
+    <input [disabled]="!signupForm.valid" class="btn btn-primary" type="submit" value="SUBMIT">
+</form>

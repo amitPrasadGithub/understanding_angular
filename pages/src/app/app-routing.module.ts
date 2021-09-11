@@ -14,8 +14,10 @@ import { PhoneComponent } from 'src/pages/components/phone/phone.component';
 import { PrefetchComponent } from 'src/pages/components/prefetch/prefetch.component';
 import { ProductComponent } from 'src/pages/components/product/product.component';
 import { StickyNotesComponent } from 'src/pages/components/sticky-notes/sticky-notes.component';
+import { AsyncValidatorComponent } from 'src/pages/components/test/async-validators/async-validator.component';
 import { EventEmitterComponent } from 'src/pages/components/test/event-emitter/event-emitter.component';
 import { FormsComponent } from 'src/pages/components/test/forms/forms.component';
+import { ReactiveFormsComponent } from 'src/pages/components/test/reactive-forms/reactive-forms.component';
 import { ViewAllContactsComponent } from 'src/pages/components/view-all-contacts/view-all-contacts.component';
 import { WebAddressComponent } from 'src/pages/components/webAddress/webAddress.component';
 import { AdminGaurd } from 'src/pages/gaurds/admin-gaurd.service';
@@ -42,6 +44,8 @@ const appRoutes: Routes = [
     { path: 'custom-observable', component: CustomObservable },
     { path: 'event-emitter', component: EventEmitterComponent },
     { path: 'forms', component: FormsComponent },
+    { path: 'reactive-forms', component: ReactiveFormsComponent },
+    { path: 'async-validators', component: AsyncValidatorComponent },
     { path: 'viewAllContacts', component: ViewAllContactsComponent, canActivate: [AuthGaurd] },
     { path: 'prefetch', component: PrefetchComponent, resolve: {errorResolverService: ErrorResolverService}},
     { path: 'error-page', component: ErrorPageComponent, data: {message: 'Permission Denied'} },

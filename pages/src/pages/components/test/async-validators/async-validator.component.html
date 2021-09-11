@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+    <div class="form-group" formGroupName="contactData">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email"
+                   formControlName="email" class="form-control">
+
+            <span class="help-block"
+                  *ngIf="">Invalid email</span>
+        </div>
+    </div>
+    <input type="submit" value="SUBMIT"
+            class="btn btn-primary">
+</form>

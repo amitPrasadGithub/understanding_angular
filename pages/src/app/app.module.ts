@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ParentComponent } from 'src/pages/components/app-parent/app-parent.component';
 import { ContactBriefComponent } from 'src/pages/components/contact-brief/contact-brief.component';
@@ -8,8 +8,10 @@ import { ContactSummaryComponent } from 'src/pages/components/contact-summary/co
 import { CustomObservable } from 'src/pages/components/observables/custom-observable/custom-observable.component';
 import { PersonalInfoComponent } from 'src/pages/components/personal-info/personal-info.component';
 import { PrefetchComponent } from 'src/pages/components/prefetch/prefetch.component';
+import { AsyncValidatorComponent } from 'src/pages/components/test/async-validators/async-validator.component';
 import { EventEmitterComponent } from 'src/pages/components/test/event-emitter/event-emitter.component';
 import { FormsComponent } from 'src/pages/components/test/forms/forms.component';
+import { ReactiveFormsComponent } from 'src/pages/components/test/reactive-forms/reactive-forms.component';
 import { ViewAllContactsComponent } from 'src/pages/components/view-all-contacts/view-all-contacts.component';
 import { DropdownDirective } from 'src/pages/directives/dropdown/dropdown.directive';
 import { HeaderComponent } from 'src/pages/experience_fragments/header/header.component';
@@ -44,6 +46,8 @@ import { AppComponent } from './app.component';
     CustomObservable,
     EventEmitterComponent,
     FormsComponent,
+    ReactiveFormsComponent,
+    AsyncValidatorComponent,
     
 
     DropdownDirective,
@@ -51,7 +55,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AppPagesService,
