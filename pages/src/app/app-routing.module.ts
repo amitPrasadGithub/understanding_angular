@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddressComponent } from 'src/pages/components/address/address.component';
+import { AngularPipesComponent } from 'src/pages/components/angular-pipes/angular-pipes.component';
 import { AppsComponent } from 'src/pages/components/apps/apps.component';
 import { ContactDetailComponent } from 'src/pages/components/contact-detail/contact-detail.component';
 import { ContactSummaryComponent } from 'src/pages/components/contact-summary/contact-summary.component';
@@ -46,6 +47,7 @@ const appRoutes: Routes = [
     { path: 'forms', component: FormsComponent },
     { path: 'reactive-forms', component: ReactiveFormsComponent },
     { path: 'async-validators', component: AsyncValidatorComponent },
+    { path: 'angular-pipes', component: AngularPipesComponent },
     { path: 'viewAllContacts', component: ViewAllContactsComponent, canActivate: [AuthGaurd] },
     { path: 'prefetch', component: PrefetchComponent, resolve: {errorResolverService: ErrorResolverService}},
     { path: 'error-page', component: ErrorPageComponent, data: {message: 'Permission Denied'} },

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AngularPipesComponent } from 'src/pages/components/angular-pipes/angular-pipes.component';
 import { ParentComponent } from 'src/pages/components/app-parent/app-parent.component';
 import { ContactBriefComponent } from 'src/pages/components/contact-brief/contact-brief.component';
 import { ContactDetailComponent } from 'src/pages/components/contact-detail/contact-detail.component';
@@ -17,6 +18,8 @@ import { DropdownDirective } from 'src/pages/directives/dropdown/dropdown.direct
 import { HeaderComponent } from 'src/pages/experience_fragments/header/header.component';
 import { AdminGaurd } from 'src/pages/gaurds/admin-gaurd.service';
 import { AuthGaurd } from 'src/pages/gaurds/auth-gaurd.service';
+import { RemoveDuplicateCharPipe } from 'src/pages/pipes/remove-duplicate-char.pipe';
+import { ReplaceDashPipe } from 'src/pages/pipes/replace-dash.pipe';
 import { AppPagesService } from 'src/pages/services/app-pages.service';
 import { AddressService } from 'src/pages/services/childs/address.service';
 import { ContactDetailService } from 'src/pages/services/childs/contact-detail.service';
@@ -48,8 +51,16 @@ import { AppComponent } from './app.component';
     FormsComponent,
     ReactiveFormsComponent,
     AsyncValidatorComponent,
-    
+    AngularPipesComponent,
 
+    /**
+     * Pipes
+     */
+    ReplaceDashPipe,
+    RemoveDuplicateCharPipe,
+    /**
+     * Directives
+     */
     DropdownDirective,
   ],
   imports: [
