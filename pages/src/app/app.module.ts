@@ -20,6 +20,7 @@ import { AdminGaurd } from 'src/pages/gaurds/admin-gaurd.service';
 import { AuthGaurd } from 'src/pages/gaurds/auth-gaurd.service';
 import { RemoveDuplicateCharPipe } from 'src/pages/pipes/remove-duplicate-char.pipe';
 import { ReplaceDashPipe } from 'src/pages/pipes/replace-dash.pipe';
+import { StringManipulation } from 'src/pages/pipes/string-manipulation.pipe';
 import { AppPagesService } from 'src/pages/services/app-pages.service';
 import { AddressService } from 'src/pages/services/childs/address.service';
 import { ContactDetailService } from 'src/pages/services/childs/contact-detail.service';
@@ -58,6 +59,7 @@ import { AppComponent } from './app.component';
      */
     ReplaceDashPipe,
     RemoveDuplicateCharPipe,
+    StringManipulation,
     /**
      * Directives
      */

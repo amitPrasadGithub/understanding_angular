@@ -1,6 +1,27 @@
-<p>{{ username }}</p>
-<p>{{ birthday | date: 'fullDate' }}</p>
-
-<p>{{ sentence | replacedash }}</p>
-
-<p>{{ str | removeduplicate }}</p>
+<form>
+    <div class="form-group">
+        <label for="str">Enter any string</label>
+        <textarea type="text" id="str" name="str" class="form-control md-textarea" [(ngModel)]="str"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="operation">Choose Operation</label>
+        <select name="operation" id="operation" class="form-control" [(ngModel)]="operation">
+            <option *ngFor="let option of options" value="{{option}}">{{option}}</option>
+        </select>
+    </div>
+    <div class="form-group"
+        *ngIf="operation === 'REPLACE CHARACTER'">
+        <label for="replace">Replace</label>
+        <input type="text" id="replace" name="replace" [(ngModel)]="replace">
+        <label for="replace-from">From</label>
+        <input type="text" id="replace-from" name="replace-from" [(ngModel)]="replace_from">
+    </div>
+    <button class="btn btn-default" (click)="onManipulate()">Manipulate</button>
+</form>
+<div class="container">
+    <div class="row">
+        <div class="md-col-12">
+            {{str | stringmanipulation:operation}}
+        </div>
+    </div>
+</div>

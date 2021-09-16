@@ -5,12 +5,21 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: './angular-pipes.component.html'
 })
 export class AngularPipesComponent implements OnInit {
+    str: string = '';
+    operation: string = ''
+    replace: string = '';
+    replace_from: string = ''
 
-    username = 'Max';
-    birthday = '11-Nov-1996';
+    options: Array<string> = [
+        'UPPERCASE',
+        'LOWERCASE',
+        'REMOVE DUPLICATE CHARACTERS',
+        'REPLACE CHARACTER'
+    ]
 
-    str = 'eearr';
-
-    sentence: string = 'my-name-is-cipher';
     ngOnInit() {}
+
+    onManipulate() {
+
+    }
 }

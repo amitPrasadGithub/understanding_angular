@@ -9,12 +9,13 @@ export class RemoveDuplicateCharPipe implements PipeTransform {
         debugger;
         let i: number, j: number;
         for(i=0; i<m_value.length; i++) {
-            for(j=i+1; i<m_value.length; j++) {
+            for(j=i+1; j<m_value.length; j++) {
                 if(m_value.charAt(i) === m_value.charAt(j)) {
-                    m_value = m_value.substr(i, j-1);
+                    m_value = m_value.slice(0, j).concat(m_value.slice(j+1));
                     j--;
                 }
             }
         }
+        return m_value;
     }
 }
