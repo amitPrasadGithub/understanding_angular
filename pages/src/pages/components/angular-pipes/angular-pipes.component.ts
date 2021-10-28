@@ -14,7 +14,8 @@ export class AngularPipesComponent implements OnInit {
         'UPPERCASE',
         'LOWERCASE',
         'REMOVE DUPLICATE CHARACTERS',
-        'REPLACE CHARACTER'
+        'REPLACE CHARACTER',
+        'UPPERCASE AND REPLACE DASH'
     ]
 
     ngOnInit() {}

@@ -14,6 +14,9 @@ export class StringManipulation implements PipeTransform {
                 return this.removeDuplicateCharacters(str);
             case 'REMOVE -':
                 return str.replaceAll('-', ' ');
+            case 'UPPERCASE AND REPLACE DASH':
+                return this.replaceDashWithSpaceUppercase(str);
+
             
         }
     }
@@ -28,6 +31,11 @@ export class StringManipulation implements PipeTransform {
                 }
             }
         }
+        return str;
+    }
+
+    replaceDashWithSpaceUppercase(str: string) {
+        str = str.toLocaleUpperCase().replaceAll('-', ' ');
         return str;
     }
 }
