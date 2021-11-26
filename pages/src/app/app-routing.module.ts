@@ -7,6 +7,7 @@ import { ContactDetailComponent } from 'src/pages/components/contact-detail/cont
 import { ContactSummaryComponent } from 'src/pages/components/contact-summary/contact-summary.component';
 import { ErrorPageComponent } from 'src/pages/components/error-page/error-page.component';
 import { PageNotFoundComponent } from 'src/pages/components/error/page-not-found/page-not-found.component';
+import { GenericSearchComponent } from 'src/pages/components/generic-search/generic-search.component';
 import { HomeComponent } from 'src/pages/components/home/home.component';
 import { LoginComponent } from 'src/pages/components/login/login.component';
 import { CustomObservable } from 'src/pages/components/observables/custom-observable/custom-observable.component';
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
     { path: 'reactive-forms', component: ReactiveFormsComponent },
     { path: 'async-validators', component: AsyncValidatorComponent },
     { path: 'angular-pipes', component: AngularPipesComponent },
+    { path: 'search', component: GenericSearchComponent },
     { path: 'viewAllContacts', component: ViewAllContactsComponent, canActivate: [AuthGaurd] },
     { path: 'prefetch', component: PrefetchComponent, resolve: {errorResolverService: ErrorResolverService}},
     { path: 'error-page', component: ErrorPageComponent, data: {message: 'Permission Denied'} },

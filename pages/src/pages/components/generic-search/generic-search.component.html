@@ -1,0 +1,7 @@
+<form>
+    <div class="form-group">
+        <label for="searchstr">Search</label>
+        <textarea name="searchstr" id="searchstr" cols="10" rows="2" class="form-control" [(ngModel)]="searchstr" (keyup)="searchResults();"></textarea>
+    </div>
+</form>
+<div #outputResults></div>

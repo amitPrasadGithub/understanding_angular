@@ -15,7 +15,7 @@
     "lib": [
       "esnext",
       "dom"
-    ]
+    ],
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false

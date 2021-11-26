@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,6 +7,7 @@ import { ParentComponent } from 'src/pages/components/app-parent/app-parent.comp
 import { ContactBriefComponent } from 'src/pages/components/contact-brief/contact-brief.component';
 import { ContactDetailComponent } from 'src/pages/components/contact-detail/contact-detail.component';
 import { ContactSummaryComponent } from 'src/pages/components/contact-summary/contact-summary.component';
+import { GenericSearchComponent } from 'src/pages/components/generic-search/generic-search.component';
 import { CustomObservable } from 'src/pages/components/observables/custom-observable/custom-observable.component';
 import { PersonalInfoComponent } from 'src/pages/components/personal-info/personal-info.component';
 import { PrefetchComponent } from 'src/pages/components/prefetch/prefetch.component';
@@ -30,6 +32,7 @@ import { PersonalInfoService } from 'src/pages/services/childs/personal-info.ser
 import { PhoneService } from 'src/pages/services/childs/phone.service';
 import { EventEmitterService } from 'src/pages/services/childs/test/event-emitter.service';
 import { WebAddressService } from 'src/pages/services/childs/webaddress.service';
+import { GenericSearchService } from 'src/pages/services/generic-search.service';
 import { AdminGaurdService } from 'src/pages/services/route-gaurds/admin-gaurd.service';
 import { AuthGaurdService } from 'src/pages/services/route-gaurds/auth-gaurd.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -53,6 +56,7 @@ import { AppComponent } from './app.component';
     ReactiveFormsComponent,
     AsyncValidatorComponent,
     AngularPipesComponent,
+    GenericSearchComponent,
 
     /**
      * Pipes
@@ -69,9 +73,11 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
+    HttpClient,
     AppPagesService,
     ContactDetailService,
     ContactSummaryService,
@@ -88,6 +94,8 @@ import { AppComponent } from './app.component';
     ErrorResolverService,
 
     EventEmitterService,
+
+    GenericSearchService,
   ],
   bootstrap: [AppComponent]
 })
