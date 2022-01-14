@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddressComponent } from 'src/pages/components/address/address.component';
+import { StepperComponent } from 'src/pages/components/angular-materials/stepper/stepper.component';
 import { AngularPipesComponent } from 'src/pages/components/angular-pipes/angular-pipes.component';
 import { AppsComponent } from 'src/pages/components/apps/apps.component';
 import { ContactDetailComponent } from 'src/pages/components/contact-detail/contact-detail.component';
@@ -27,42 +28,44 @@ import { AuthGaurd } from 'src/pages/gaurds/auth-gaurd.service';
 import { ErrorResolverService } from 'src/pages/services/childs/error-resolver.service';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'product', component: ProductComponent },
-    { path: 'apps', component: AppsComponent },
-    { path: 'login', component: LoginComponent },
-    { 
-      path: 'contactDetail/:id', 
-      component: ContactDetailComponent, 
-      canActivateChild: [AuthGaurd],
-      children: [
-        { path: 'personalInfo/:id', component: PersonalInfoComponent, outlet: 'contactDetail' },
-        { path: 'address/:id', component: AddressComponent, outlet: 'contactDetail' },
-        { path: 'phone/:id', component: PhoneComponent, outlet: 'contactDetail' },
-        { path: 'webAddress/:id', component: WebAddressComponent, outlet: 'contactDetail' },
-        { path: 'stickyNotes', component: StickyNotesComponent, outlet: 'contactDetail' }
-    ] },
-    { path: 'contactSummary', component: ContactSummaryComponent },
-    { path: 'custom-observable', component: CustomObservable },
-    { path: 'event-emitter', component: EventEmitterComponent },
-    { path: 'forms', component: FormsComponent },
-    { path: 'reactive-forms', component: ReactiveFormsComponent },
-    { path: 'async-validators', component: AsyncValidatorComponent },
-    { path: 'angular-pipes', component: AngularPipesComponent },
-    { path: 'search', component: GenericSearchComponent },
-    { path: 'viewAllContacts', component: ViewAllContactsComponent, canActivate: [AuthGaurd] },
-    { path: 'prefetch', component: PrefetchComponent, resolve: {errorResolverService: ErrorResolverService}},
-    { path: 'error-page', component: ErrorPageComponent, data: {message: 'Permission Denied'} },
-    { path: '**', component: PageNotFoundComponent }
-    
-  ]
-@NgModule({
-    imports: [
-        RouterModule.forRoot(appRoutes)
-    ],
-    exports: [
-        RouterModule
+  { path: '', component: HomeComponent },
+  { path: 'product', component: ProductComponent },
+  { path: 'apps', component: AppsComponent },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'contactDetail/:id',
+    component: ContactDetailComponent,
+    canActivateChild: [AuthGaurd],
+    children: [
+      { path: 'personalInfo/:id', component: PersonalInfoComponent, outlet: 'contactDetail' },
+      { path: 'address/:id', component: AddressComponent, outlet: 'contactDetail' },
+      { path: 'phone/:id', component: PhoneComponent, outlet: 'contactDetail' },
+      { path: 'webAddress/:id', component: WebAddressComponent, outlet: 'contactDetail' },
+      { path: 'stickyNotes', component: StickyNotesComponent, outlet: 'contactDetail' }
     ]
+  },
+  { path: 'contactSummary', component: ContactSummaryComponent },
+  { path: 'custom-observable', component: CustomObservable },
+  { path: 'event-emitter', component: EventEmitterComponent },
+  { path: 'forms', component: FormsComponent },
+  { path: 'reactive-forms', component: ReactiveFormsComponent },
+  { path: 'async-validators', component: AsyncValidatorComponent },
+  { path: 'angular-pipes', component: AngularPipesComponent },
+  { path: 'search', component: GenericSearchComponent },
+  { path: 'viewAllContacts', component: ViewAllContactsComponent, canActivate: [AuthGaurd] },
+  { path: 'prefetch', component: PrefetchComponent, resolve: { errorResolverService: ErrorResolverService } },
+  { path: 'stepper', component: StepperComponent },
+  { path: 'error-page', component: ErrorPageComponent, data: { message: 'Permission Denied' } },
+  { path: '**', component: PageNotFoundComponent }
+
+]
+@NgModule({
+  imports: [
+    RouterModule.forRoot(appRoutes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule {
 

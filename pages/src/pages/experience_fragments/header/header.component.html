@@ -37,6 +37,12 @@
                         <li><a [routerLink]="['search']">Search</a></li>
                     </div>
                 </li>
+                <li appDropdown>
+                    <a class="dropdown-toggle" role="button">Angular Materials</a>
+                    <div class="dropdown-menu">
+                        <li><a [routerLink]="['stepper']">Stepper</a></li>
+                    </div>
+                </li>
                 <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

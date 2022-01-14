@@ -38,6 +38,8 @@ import { AuthGaurdService } from 'src/pages/services/route-gaurds/auth-gaurd.ser
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialsModule } from './angular-materials.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,6 +77,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    AngularMaterialsModule,
   ],
   providers: [
     HttpClient,
