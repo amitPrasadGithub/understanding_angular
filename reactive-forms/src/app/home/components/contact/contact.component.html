@@ -1,0 +1,15 @@
+<div class="contact-form-container">
+      <form-fields-input-field
+            [hintLabel]="'this is hint label'"
+            [floatLabel]="'this is float label'"
+            [placeholder]="'this is placeholder'"
+            [control]="'firstName'"
+            (inputFieldValue)="onFormValueChange($event)"
+      ></form-fields-input-field>
+
+      <form-fields-button-field
+            [buttonLabel]="'submit'"
+            [isButtonDisabled]="!contactGroup.valid"
+      ></form-fields-button-field>
+
+</div>
