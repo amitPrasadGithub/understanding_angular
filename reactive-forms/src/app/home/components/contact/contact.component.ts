@@ -10,12 +10,16 @@ export class ContactComponent implements OnInit {
 
       contactGroup!: FormGroup;
       testFormGroup!: FormGroup;
+      r1!: FormGroup;
 
       constructor(
             private fb: FormBuilder
       ) { }
 
-      ngOnInit() {
+      async ngOnInit() {
+            this.iterateObject();
+            this.setVsAddControl();
+
             this.contactGroup = this.fb.group({
                   'personalInfo': this.fb.group({
                         'firstName': ['', {
@@ -94,6 +98,42 @@ export class ContactComponent implements OnInit {
                   case 'firstName':
                         (this.contactGroup.get('personalInfo') as FormGroup).setControl('firstName', new FormControl(event.value, { validators: [Validators.required] }))
                         break;
+            }
+      }
+
+
+      setVsAddControl() {
+            let formAr = ["name", "email", "phone"];
+
+            this.r1 = new FormGroup({})
+            formAr.forEach((value) => {
+                  this.r1.setControl(value, new FormControl('', {
+                        validators: [],
+                        asyncValidators: []
+                  }))
+            })
+            console.log(this.r1);
+
+            let r2 = new FormGroup({
+                  'name': new FormControl('')
+            })
+            console.log(r2)
+
+            let r3 = new FormGroup({});
+            formAr.forEach((value) => {
+                  r3.addControl(value, new FormControl(''))
+            })
+            console.log(r3);
+      }
+
+      iterateObject() {
+            let person: any = {
+                  name: "amity",
+                  email: 'em'
+            }
+
+            for (let x in person) {
+                  console.log(person[x]);
             }
       }
 

@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+}
+
+.datatable {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.table-top > mat-form-field {
+  grid-column: 1 / span 1;
+}
+
+.table-top > mat-paginator {
+  grid-column: 3 / span 1;
+}
+
+.table-bottom {
+  display: grid;
+}
+
+.select-columns {
+  position: relative;
+}
+
+.select-columns material-checkbox {
+  position: absolute;
+}

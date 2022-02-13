@@ -1,0 +1,7 @@
+<section [formGroup]="checkbox">
+      <p *ngFor="let check of options">
+            <mat-checkbox [formControlName]="check" (change)="onChange($event)">
+                  {{check}}
+            </mat-checkbox>
+      </p>
+</section>

@@ -1,0 +1,22 @@
+<div class="contact-form-container">
+      <form [formGroup]="contactGroup">
+            <input-field-root-form-group
+                  [control]="'firstName'"      
+                  [hintLabel]="'hintLabel'"      
+                  [floatLabel]="'floatLabel'"      
+                  [placeholder]="'placeholder'"      
+            >
+            </input-field-root-form-group>
+            <input-field-root-form-group
+                  [control]="'lastName'"      
+                  [hintLabel]="'hintLabel'"      
+                  [floatLabel]="'floatLabel'"      
+                  [placeholder]="'placeholder'"      
+            >
+            </input-field-root-form-group>
+                  <form-fields-button-field
+                  [buttonLabel]="'submit'"
+                  [isButtonDisabled]="!contactGroup.valid"
+            ></form-fields-button-field>
+      </form>
+</div>
