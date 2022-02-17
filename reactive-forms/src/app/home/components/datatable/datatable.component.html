@@ -5,13 +5,24 @@
                   <input matInput #input (input)="applyFilter($event)">
             </mat-form-field>
             <div>
-                  <div class="select-columns">
-                        <span (click)="dropdownToggle($event)">columns</span>
+                  <div class="select-status">
+                        <material-checkbox [options]="selectStatusOptions" 
+                              [headerLabel]="'columns'" 
+                              [checked]="[]" 
+                              [disabled]="['after', 'before']" 
+                              [control]="'status'" 
+                              (multiSelectFieldValue)="onSelectChange($event)">
+                        </material-checkbox>
+                  </div>
+            </div>
+            <div>
+                  <div class="select-column">
                         <material-checkbox [options]="columnOptions" 
+                              [headerLabel]="'columns'" 
                               [checked]="displayedColumns" 
                               [disabled]="['after', 'before']" 
                               [control]="'displayedColumns'" 
-                              (checkboxValue)="onCheckboxChange($event)">
+                              (multiSelectFieldValue)="onSelectChange($event)">
                         </material-checkbox>
                   </div>
             </div>

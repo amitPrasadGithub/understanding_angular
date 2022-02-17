@@ -17,6 +17,7 @@ export class ContactComponent implements OnInit {
       ) { }
 
       async ngOnInit() {
+            this.iterateFormGroup();
             this.iterateObject();
             this.setVsAddControl();
 
@@ -135,6 +136,19 @@ export class ContactComponent implements OnInit {
             for (let x in person) {
                   console.log(person[x]);
             }
+      }
+
+      iterateFormGroup() {
+            let person = new FormGroup({
+                  'firstName': new FormControl('Amit'),
+                  'lastName': new FormControl('Prasad'),
+                  'email': new FormControl('amit.prasad@gmail.com'),
+            });
+
+            Object.keys(person.controls).forEach((value) => {
+                  person.setControl(value, new FormControl('Hahahaha!'));
+                  console.log(value);
+            })
       }
 
 }

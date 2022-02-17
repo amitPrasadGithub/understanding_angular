@@ -3,8 +3,8 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MaterialModule } from "../material/material.module";
 import { ButtonComponent } from "./components/button/button.component";
-import { CheckboxComponent } from "./components/checkbox/checkbox.component";
 import { InputFieldComponent } from "./components/input-field/input-field.component";
+import { MultiSelectFieldComponent } from "./components/multi-select-field/multi-select-field.component";
 import { InputFieldComponent as InputFieldComponentRootFormGroup } from "./components/root-form-group/input-field/input-field.component";
 
 
@@ -16,7 +16,7 @@ const formFieldsComponents = [
        * RootFromGroup component
        */
       InputFieldComponentRootFormGroup,
-      CheckboxComponent,
+      MultiSelectFieldComponent,
 ];
 @NgModule({
       declarations: [formFieldsComponents],

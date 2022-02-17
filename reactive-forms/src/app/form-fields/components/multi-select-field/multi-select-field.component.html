@@ -1,0 +1,6 @@
+<mat-form-field appearance="fill">
+      <mat-label>{{headerLabel}}</mat-label>
+      <mat-select multiple [formControl]="checkboxOps" (selectionChange)="onChange($event)">
+            <mat-option [value]="option" *ngFor="let option of options">{{option}}</mat-option>
+      </mat-select>
+</mat-form-field>

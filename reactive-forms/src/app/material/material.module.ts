@@ -9,6 +9,8 @@ import { MatSortModule } from "@angular/material/sort";
 import { MatIconModule } from "@angular/material/icon";
 import { BasicTableComponent } from "./shareable/basic-table/basic-table.component";
 import { NgForTableComponent } from "./shareable/ng-for-table/ng-for-table.component";
+import { MatSelectModule } from "@angular/material/select";
+import { MatButtonModule } from "@angular/material/button";
 
 const material_components = [
       MatFormFieldModule,
@@ -18,6 +20,8 @@ const material_components = [
       MatPaginatorModule,
       MatSortModule,
       MatIconModule,
+      MatSelectModule,
+      MatButtonModule,
 ]
 
 const custom_components = [
