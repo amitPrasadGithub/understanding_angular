@@ -12,6 +12,10 @@ import { DatatableCompoennt } from './home/components/datatable/datatable.compon
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
 import { DatatableCustomFilter } from './home/components/datatable-custom-filter/datatable-custom-filter.component';
+import { ContactValidationComponent } from './home/components/contact-validation/contact-validation.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CallByReferenceValueComponent } from './home/components/call-by-reference-value/call-by-reference-value.component';
+import { ObjectManipulationComponent } from './home/components/object-manipulation/object-manipulation.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +28,14 @@ import { DatatableCustomFilter } from './home/components/datatable-custom-filter
     ContactComponent2,
     DatatableCompoennt,
     DatatableCustomFilter,
+    ContactValidationComponent,
+    CallByReferenceValueComponent,
+    ObjectManipulationComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,

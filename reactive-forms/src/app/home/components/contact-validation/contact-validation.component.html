@@ -1,0 +1,11 @@
+<form [formGroup]="contactForm">
+      <mat-form-field>
+            <label for="email">Email</label>
+            <input matInput formControlName="email" id="email">
+            <mat-error>{{contactForm.get('email').errors?contactForm.get('email').errors['errorMessage']: ''}}</mat-error>
+      </mat-form-field>
+      <div>
+            <input type="submit" value="submit" [disabled]="!contactForm.valid">
+      </div>
+
+</form>
