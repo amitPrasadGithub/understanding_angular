@@ -9,6 +9,7 @@ import { ErrorPageComponent } from 'src/pages/components/error-page/error-page.c
 import { PageNotFoundComponent } from 'src/pages/components/error/page-not-found/page-not-found.component';
 import { HomeComponent } from 'src/pages/components/home/home.component';
 import { LoginComponent } from 'src/pages/components/login/login.component';
+import { ObjectManipulationComponent } from 'src/pages/components/object-manipulation/object-manipulation.component';
 import { CustomObservable } from 'src/pages/components/observables/custom-observable/custom-observable.component';
 import { PersonalInfoComponent } from 'src/pages/components/personal-info/personal-info.component';
 import { PhoneComponent } from 'src/pages/components/phone/phone.component';
@@ -50,6 +51,7 @@ const appRoutes: Routes = [
     { path: 'angular-pipes', component: AngularPipesComponent },
     { path: 'viewAllContacts', component: ViewAllContactsComponent, canActivate: [AuthGaurd] },
     { path: 'prefetch', component: PrefetchComponent, resolve: {errorResolverService: ErrorResolverService}},
+    { path: 'object-manipulation', component: ObjectManipulationComponent },
     { path: 'error-page', component: ErrorPageComponent, data: {message: 'Permission Denied'} },
     { path: '**', component: PageNotFoundComponent }
     

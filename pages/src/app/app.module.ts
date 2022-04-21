@@ -6,6 +6,7 @@ import { ParentComponent } from 'src/pages/components/app-parent/app-parent.comp
 import { ContactBriefComponent } from 'src/pages/components/contact-brief/contact-brief.component';
 import { ContactDetailComponent } from 'src/pages/components/contact-detail/contact-detail.component';
 import { ContactSummaryComponent } from 'src/pages/components/contact-summary/contact-summary.component';
+import { ObjectManipulationComponent } from 'src/pages/components/object-manipulation/object-manipulation.component';
 import { CustomObservable } from 'src/pages/components/observables/custom-observable/custom-observable.component';
 import { PersonalInfoComponent } from 'src/pages/components/personal-info/personal-info.component';
 import { PrefetchComponent } from 'src/pages/components/prefetch/prefetch.component';
@@ -53,6 +54,7 @@ import { AppComponent } from './app.component';
     ReactiveFormsComponent,
     AsyncValidatorComponent,
     AngularPipesComponent,
+    ObjectManipulationComponent,
 
     /**
      * Pipes
