@@ -13,7 +13,8 @@ export class AsyncValidatorComponent implements OnInit {
     ngOnInit() {
         this.signupForm = new FormGroup({
             'contactData': new FormGroup({
-                'email': new FormControl(null, [Validators.required], [this.duplicateEmail.bind(this)])
+                'email': new FormControl(null, [Validators.required], [this.duplicateEmail.bind(this)]),
+                'email2': new FormControl(null, [Validators.required], [this.duplicatEmailAdvance()])
             })
         })
     }
@@ -33,5 +34,22 @@ export class AsyncValidatorComponent implements OnInit {
             }, 2000)
         })
         return promise;
+    }
+
+    duplicatEmailAdvance(): any {
+        
+        return (control: FormControl) => {
+            const promise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if(control.value == 'amit.prasad@gmail.com') {
+                        resolve({errorMessage: 'Invalid'})
+                    }
+                    resolve(null);
+                }, 1000)    
+            })
+            return promise;
+        }
+
+        
     }
 }

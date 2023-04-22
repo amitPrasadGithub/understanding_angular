@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { concat } from 'rxjs';
 
 @Pipe({
     name: 'stringmanipulation'
@@ -16,9 +17,20 @@ export class StringManipulation implements PipeTransform {
                 return str.replaceAll('-', ' ');
             case 'UPPERCASE AND REPLACE DASH':
                 return this.replaceDashWithSpaceUppercase(str);
+            case 'REPLACE SPACE BY UNDERSCORE':
+                return this.replaceSpaceByUnderscore(str);
 
             
         }
+    }
+
+    replaceSpaceByUnderscore(str: string): string {
+        let ar = str.split(' ');
+        let n_str = '';
+        ar.forEach(element => {
+            n_str = n_str + element + '_';
+        })
+        return n_str;
     }
 
     removeDuplicateCharacters(str: string): string {
