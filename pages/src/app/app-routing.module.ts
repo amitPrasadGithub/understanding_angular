@@ -5,6 +5,7 @@ import { AngularPipesComponent } from 'src/pages/components/angular-pipes/angula
 import { AppsComponent } from 'src/pages/components/apps/apps.component';
 import { ContactDetailComponent } from 'src/pages/components/contact-detail/contact-detail.component';
 import { ContactSummaryComponent } from 'src/pages/components/contact-summary/contact-summary.component';
+import { CustomSturcturalDirectiveComponent } from 'src/pages/components/custom-structual-directive/custom-structural-directive.component';
 import { ErrorPageComponent } from 'src/pages/components/error-page/error-page.component';
 import { PageNotFoundComponent } from 'src/pages/components/error/page-not-found/page-not-found.component';
 import { HomeComponent } from 'src/pages/components/home/home.component';
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     { path: 'viewAllContacts', component: ViewAllContactsComponent, canActivate: [AuthGaurd] },
     { path: 'prefetch', component: PrefetchComponent, resolve: {errorResolverService: ErrorResolverService}},
     { path: 'object-manipulation', component: ObjectManipulationComponent },
+    { path: 'custom-structural-directive', component: CustomSturcturalDirectiveComponent },
     { path: 'error-page', component: ErrorPageComponent, data: {message: 'Permission Denied'} },
     { path: '**', component: PageNotFoundComponent }
     

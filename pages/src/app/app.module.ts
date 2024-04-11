@@ -6,6 +6,7 @@ import { ParentComponent } from 'src/pages/components/app-parent/app-parent.comp
 import { ContactBriefComponent } from 'src/pages/components/contact-brief/contact-brief.component';
 import { ContactDetailComponent } from 'src/pages/components/contact-detail/contact-detail.component';
 import { ContactSummaryComponent } from 'src/pages/components/contact-summary/contact-summary.component';
+import { CustomSturcturalDirectiveComponent } from 'src/pages/components/custom-structual-directive/custom-structural-directive.component';
 import { ObjectManipulationComponent } from 'src/pages/components/object-manipulation/object-manipulation.component';
 import { CustomObservable } from 'src/pages/components/observables/custom-observable/custom-observable.component';
 import { PersonalInfoComponent } from 'src/pages/components/personal-info/personal-info.component';
@@ -15,6 +16,7 @@ import { EventEmitterComponent } from 'src/pages/components/test/event-emitter/e
 import { FormsComponent } from 'src/pages/components/test/forms/forms.component';
 import { ReactiveFormsComponent } from 'src/pages/components/test/reactive-forms/reactive-forms.component';
 import { ViewAllContactsComponent } from 'src/pages/components/view-all-contacts/view-all-contacts.component';
+import { AlternateIfDirective } from 'src/pages/directives/custom-structural-directive/alternate-if.directive';
 import { DropdownDirective } from 'src/pages/directives/dropdown/dropdown.directive';
 import { HeaderComponent } from 'src/pages/experience_fragments/header/header.component';
 import { AdminGaurd } from 'src/pages/gaurds/admin-gaurd.service';
@@ -55,6 +57,7 @@ import { AppComponent } from './app.component';
     AsyncValidatorComponent,
     AngularPipesComponent,
     ObjectManipulationComponent,
+    CustomSturcturalDirectiveComponent,
 
     /**
      * Pipes
@@ -66,6 +69,11 @@ import { AppComponent } from './app.component';
      * Directives
      */
     DropdownDirective,
+
+    /***
+     * Custom Structural Directives
+     */
+    AlternateIfDirective,
   ],
   imports: [
     BrowserModule,
